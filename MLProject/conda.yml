@@ -1,0 +1,12 @@
+name: sleep_health
+channels:
+  - defaults
+dependencies:
+  - python=3.12.7
+  - pip
+  - pip:
+    - mlflow
+    - pandas
+    - numpy
+    - scikit-learn
+    - joblib
