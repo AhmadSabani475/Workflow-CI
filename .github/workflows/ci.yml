@@ -19,10 +19,10 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install MLflow
-        run: pip install mlflow
+      - name: Install Dependencies
+        run: |
+          pip install mlflow pandas numpy scikit-learn joblib dagshub
 
       - name: Run MLflow Project
         run: |
-          cd MLProject
-          mlflow run . --env-manager=local
+          mlflow run MLProject --env-manager=local
