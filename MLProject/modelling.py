@@ -3,9 +3,10 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 import numpy as np
+import dagshub
 
-mlflow.set_tracking_uri('http://127.0.0.1:8000/')
-mlflow.set_experiment("Eksperimen_modelling1")
+dagshub.init(repo_owner='AhmadSabani475', repo_name='Eksperimen_SML_Ahmad-Rizki-Sabani', mlflow=True)
+mlflow.set_experiment("Eksperimen_kriteria3")
 
 df = pd.read_csv("data_preprocessing.csv")
 X = df.drop(columns=['Sleep Disorder'])
